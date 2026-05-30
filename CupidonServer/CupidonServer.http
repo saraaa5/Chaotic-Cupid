@@ -1,0 +1,6 @@
+@CupidonServer_HostAddress = http://localhost:5100
+
+GET {{CupidonServer_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
