@@ -51,7 +51,7 @@ namespace CupidonServer.Hubs
             Console.WriteLine($"[SERVER] {caller.Username} has blocked {usernameToBlock}");
         }
 
-        public async Task ResponseToLetter()
+        public async Task AcceptLetter()
         {
             _personService.SetWaitForResponse(Context.ConnectionId, false);
         }

@@ -51,14 +51,13 @@ namespace CupidonServer.Services
                 _personService.SetWaitForResponse(reciver.ConnectionId, true);
 
                 await _hubContext.Clients.Client(reciver.ConnectionId)
-                    .SendAsync("LetterArived", new
-                    {
+                    .SendAsync("LetterArrived",
                         person.Username,
                         person.Town,
                         person.Age,
-                        Phone = showPhoneNum ? person.PhoneNum : "hidden",
-                        Message = message
-                    });
+                        showPhoneNum ? person.PhoneNum : "hidden",
+                        message
+                    );
             }
         }
 
